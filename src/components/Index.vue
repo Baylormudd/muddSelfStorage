@@ -2,7 +2,10 @@
   <div>
     <div class="container-style">
         <div class="row flex" style="margin-bottom:0">
-         <div class="col s0 m2 l2 hide-on-small-only left-header">cool logo?</div>
+         <div class="col s0 m2 l2 hide-on-small-only left-header">
+            <div class="top-text2">(765) 644-1434</div>
+            <div class="top-text">1434 Main Street</div>
+         </div>
       <div class="col s12 m8 l8 header">
           <div class="dater"><span>{{moment().format('dddd, MMMM Do YYYY')}}</span></div>
         <div class="header-text">MUDD</div>
@@ -60,6 +63,39 @@
              Proin malesuada tincidunt purus, sit amet maximus eros varius a. Aliquam erat volutpat. Nullam iaculis enim sed vulputate facilisis. Praesent euismod efficitur aliquam. Morbi sit amet dolor est. Proin tellus leo, convallis ut porttitor vel, scelerisque et diam. Aenean nibh sapien, 
             mollis ut libero ac, finibus mattis augue.
           </div>
+        </div>
+         <div class="content-2-2"><div class="location-header">CONTACT</div> 
+          <div class="row">
+    <form action="https://formspree.io/baylor.mudd@gmail.com" method="POST" class="col s12">
+      <div class="row" style="padding-right: 15px;">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate" v-model="message" name="Name" placeholder="First Name">
+          <label for="icon_prefix"></label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input id="icon_telephone" type="tel" class="validate" v-model="message" name="phoneNumber" placeholder="Telephone">
+          <label for="icon_telephone"></label>
+        </div>
+      </div>
+       <div class="row" style="padding-right: 15px; padding-left: 15px; margin-bottom: 0px;">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea" name="Message" v-model="message" placeholder="Message"></textarea>
+          <label for="textarea1"></label>
+        </div>
+      </div>
+      <div class="row" style=" margin-bottom: 0px;">
+        
+        <div class=""> 
+          <div stlye="padding-top:10px;padding-bottom:10px;">
+            <input class="btn-flat" type="submit" value="Send">
+          </div>
+        </div>
+</div>
+
+    </form>
+  </div>
         </div>
 
       </div>
@@ -178,6 +214,23 @@ export default {
   
 
   }
+  .btn-flat2{
+  
+ 
+  background-color:none;
+ -webkit-box-shadow:0 0px 0px 0 rgba(0,0,0,0.0), 0 0px 0px 0px rgba(0,0,0,0.12), 0 0px 0px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0px 0px 0 rgba(0,0,0,0.14), 0 0px 0px 0px rgba(0,0,0,0.12), 0 0px 0px 0 rgba(0,0,0,0.2);
+  font-size: 2.2vw;
+  background-color:none;
+  border-style:dashed;
+  border-width: 2px;
+  
+
+  }
+  .btn-flat2 a:hover{
+  color:#000080;
+
+}
 
  @media only screen and (max-width: 600px)  {
 .btn-flat{
@@ -523,12 +576,20 @@ nav a:hover{
   font-size: 1.8vw;
   margin-top: 1.55em;
 }
+.top-text2{
+  font-weight: 700;
+  font-size: 1.7vw;
+  margin-top: 1.55em;
+}
 
 .left-header{
    text-align: center;
    border-width: 2px;
    border-style: solid;
    border-right: 0px;
+    flex-direction: column;
+   align-items:center;
+   justify-content: center;
  
 }
 
@@ -537,7 +598,6 @@ nav a:hover{
    border-width: 2px;
    border-style: solid;
    border-left: 0px;
-   flex:0 0 16.6%;
    flex-direction: column;
    align-items:center;
    justify-content: center;
